@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BreakthroughController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="179.0" layoutY="97.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="158.0">
+               <children>
+                  <Label layoutX="9.0" layoutY="14.0" text="Choice of opponent strategy" />
+                  <Label layoutX="6.0" layoutY="273.0" text="Moves made by Player" />
+                  <TextArea fx:id="madeMovesField" layoutX="6.0" layoutY="296.0" prefHeight="163.0" prefWidth="187.0" />
+                  <ChoiceBox fx:id="strategyChoice" layoutX="10.0" layoutY="38.0" prefHeight="25.0" prefWidth="168.0" value="Random move">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Random move" />
+                           <String fx:value="Take pawn if possible" />
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="colorChoice" layoutX="10.0" layoutY="93.0" prefHeight="25.0" prefWidth="168.0" value="White">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="White" />
+                           <String fx:value="Black" />
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+                  <Label layoutX="14.0" layoutY="70.0" text="Choice of color" />
+                  <Button fx:id="beginGameButton" layoutX="9.0" layoutY="134.0" mnemonicParsing="false" onAction="#handleBeginGameButton" text="Begin game" />
+                  <Label layoutX="14.0" layoutY="180.0" text="Enter your move" />
+                  <TextField fx:id="actualMoveField" layoutX="11.0" layoutY="209.0" onAction="#handleActualMove" text="Enter your move here ..." />
+                  <Button fx:id="endGameButton" layoutX="109.0" layoutY="134.0" mnemonicParsing="false" onAction="#handleEndGameButton" text="End game" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="467.0" prefWidth="467.0">
+               <children>
+                  <Canvas fx:id="board" height="467.0" layoutX="119.0" layoutY="94.0" width="467.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label layoutX="447.0" layoutY="14.0" text="8">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="447.0" layoutY="69.0" text="7">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="447.0" layoutY="121.0" text="6">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="447.0" layoutY="179.0" text="5">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="447.0" layoutY="234.0" text="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="447.0" layoutY="287.0" text="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="447.0" layoutY="346.0" text="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="447.0" layoutY="396.0" text="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="436.0" text="a">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="436.0" text="b">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="130.0" layoutY="436.0" text="c">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="187.0" layoutY="436.0" text="d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="249.0" layoutY="436.0" text="e">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="302.0" layoutY="436.0" text="f">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="352.0" layoutY="436.0" text="g">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="408.0" layoutY="436.0" text="h">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
